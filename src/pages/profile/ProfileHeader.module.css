@@ -1,0 +1,17 @@
+.pfp-custom {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  border: 4px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feather-font {
+  font-family: 'Feather', sans-serif;
+}
+
+.banner {
+  height: 120px;
+  background: linear-gradient(135deg, #58CC02 0%, #1CB0F6 100%);
+  margin-top: 64px;
+}

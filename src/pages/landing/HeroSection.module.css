@@ -1,0 +1,181 @@
+.hero {
+  margin-top: 64px;
+  background: linear-gradient(180deg, rgba(88, 204, 2, 0.1), #fff 80%);
+  padding: 60px 16px;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    padding: 100px 16px;
+  }
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.textContent {
+  order: 2;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .textContent {
+    order: 1;
+    text-align: left;
+  }
+}
+
+.title {
+  font-family: 'Feather', sans-serif;
+  font-size: 36px;
+  line-height: 1.1;
+  color: rgb(75, 75, 75);
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 52px;
+  }
+}
+
+.highlight {
+  color: rgb(88, 204, 2);
+}
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+  color: rgb(119, 119, 119);
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .description {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 320px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .buttons {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: center;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.btnPrimary {
+  background-color: rgb(88, 204, 2);
+  color: white;
+}
+
+.btnPrimary:hover {
+  background-color: rgb(70, 170, 0);
+}
+
+.btnSecondary {
+  background-color: transparent;
+  color: rgb(88, 204, 2);
+  border: 2px solid rgb(88, 204, 2);
+}
+
+.btnSecondary:hover {
+  background-color: rgba(88, 204, 2, 0.1);
+}
+
+.imageContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  order: 1;
+}
+
+@media (min-width: 768px) {
+  .imageContainer {
+    order: 2;
+  }
+}
+
+.owlContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.owl {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 200, 0);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.eye {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.l {
+  left: 30%;
+}
+
+.r {
+  right: 30%;
+}
+
+.beak {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 20px solid rgb(255, 150, 0);
+  bottom: -10px;
+}

@@ -1,0 +1,11 @@
+.abar {
+  height: 4px;
+  background-color: #e5e5e5;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.afill {
+  height: 100%;
+  border-radius: 2px;
+}
