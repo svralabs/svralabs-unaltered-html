@@ -4,22 +4,22 @@ import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
-import Pricing from './pages/Pricing';
-import Dashboard from './pages/Dashboard';
+import StyleGuidePage from './pages/StyleGuidePage';
 import LearningTable from './pages/LearningTable';
-import Landing from './pages/Landing';
-import Profile from './pages/Profile';
-import StyleGuide from './pages/StyleGuide';
+import PricingPage from './pages/PricingPage';
+import LearningDashboard from './pages/LearningDashboard';
+import ProfilePage from './pages/ProfilePage';
+import LandingPage from './pages/LandingPage';
 
 function ScreenBar() {
   const loc = useLocation();
   const navs = [
-    { path: '/', label: 'Pricing' },
-    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/', label: 'StyleGuidePage' },
     { path: '/learningtable', label: 'LearningTable' },
-    { path: '/landing', label: 'Landing' },
-    { path: '/profile', label: 'Profile' },
-    { path: '/styleguide', label: 'StyleGuide' }
+    { path: '/pricingpage', label: 'PricingPage' },
+    { path: '/learningdashboard', label: 'LearningDashboard' },
+    { path: '/profilepage', label: 'ProfilePage' },
+    { path: '/landingpage', label: 'LandingPage' }
   ];
 
   return (
@@ -55,13 +55,13 @@ export default function App() {
               <ScreenBar />
               <div className="pt-10 min-h-screen">
                 <Routes>
-                  <Route path='/' element={<Pricing />} />
-        <Route path='/dashboard' element={<Dashboard />} />
+                  <Route path='/' element={<StyleGuidePage />} />
         <Route path='/learningtable' element={<LearningTable />} />
-        <Route path='/landing' element={<Landing />} />
-        <Route path='/profile' element={<Profile />} />
-        <Route path='/styleguide' element={<StyleGuide />} />
-                  <Route path="*" element={<Pricing />} />
+        <Route path='/pricingpage' element={<PricingPage />} />
+        <Route path='/learningdashboard' element={<LearningDashboard />} />
+        <Route path='/profilepage' element={<ProfilePage />} />
+        <Route path='/landingpage' element={<LandingPage />} />
+                  <Route path="*" element={<StyleGuidePage />} />
                 </Routes>
               </div>
             </BrowserRouter>

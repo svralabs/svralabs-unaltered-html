@@ -1,0 +1,54 @@
+{
+  "languages": [
+    {
+      "name": "Spanyol",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuAOuSwa8pSGdS9pwZqaF_vcCEY80r_4PERcc2QN2ZD6uScMIzSJOnRCQAvWx9lhz1YHfwlxmfOGp61V4iNkj0U66mkU0LQcn7jKhm5RHWhYKyCliI6YeE3B-oJ7_gFtf22TJrK_msENfDZGCRoI_5zzqqO4-ClPBf5tiXYEMgcfNZGONN4oDdcH3GIdSrzDNuPtnK0qAaSkPo0-7TVI-XY1NubbUw1mhPvG9xbp2p9vFiR_HVl0GxXQ3g"
+    },
+    {
+      "name": "Prancis",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuDeyStPD9_3q9hz5TQCixfzodz8NufVhlHB5_gz0eOnlu4-IDQxuZ_91-yRiyFFyZQAw8GyZa6p2V4JVh4kXDxefJnzNrraUJ1k5aI4JssYLi5BHfFqDoMcPb51t2lPy0HhZ_RXdDzxL0tebeFmjEpYRpXF0Oo97dn_klOjIfvCvtRIHNuTP9y0QpVMgJhiQ2o0qoRNZ1MgMUs7-QKRw8gWgwSyzSmagagEjagealjtD-GH3PUkXNBIrQ"
+    },
+    {
+      "name": "Jerman",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuBZ8G_8DJQjkmIiaPYSDD6CMi-k76lNdfjNThcPon5DHJZpHgwjuliihcEeuQnpk7mJgQK1hfKHtH9U5B27z6jrVK2hPSvgZu7sJsD8nvTUdZi8U2w34vpH7UOkZIvd4lCOqq4zGkGiQNxeJbkYWFX3BAgRFfiBZwgocTf3gOuQXwjrEyc_-tBvKAd_EP0JmvWcIByvu0S-gI76DM1w_BymDEKKsZFB0VAMjltUAxwCJfcqapr4CkZ5wQ"
+    },
+    {
+      "name": "Jepang",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQfgShxrWEPRYn4sFSTTHVEvKfpbmKzyaNxwnSIsbpDhBQaKAP7juk11v9Fnaf1E4inooQzFIHrZDIPP64FFZ8CdPKFFSwFJPCcqFNr9tvpuP0nl_oATFsyOhUqDSjUuz4znkx_RIBGFAI7vm8ith_EcWxQ5Bd1xWROPfG-5Cx-_wRp7KM9nzV0BmNsvFGmiYC9QB4wvSYvLReNqW9s3GO9xAsvDzWrtduYDXrx7OAH8ccv_CWEsTgAQ"
+    }
+  ],
+  "features": [
+    {
+      "icon": "🎮",
+      "title": "Seru dan bebas biaya",
+      "description": "Belajar terasa seperti main game. Raih poin, buka level baru, dan kuasai keterampilan praktis tanpa bayar sepeser pun.",
+      "bgColor": "rgba(88,204,2,.1)"
+    },
+    {
+      "icon": "🔬",
+      "title": "Didukung sains",
+      "description": "Metode kami memadukan riset bahasa dan data dari jutaan pelajar untuk membuat materi yang benar-benar melekat.",
+      "bgColor": "rgba(28,176,246,.1)"
+    },
+    {
+      "icon": "🔥",
+      "title": "Bangun kebiasaan",
+      "description": "Pengingat ramah, tantangan menarik, dan sistem streak menjaga semangatmu agar belajar jadi rutinitas harian.",
+      "bgColor": "rgba(255,150,0,.12)"
+    }
+  ],
+  "stats": [
+    {
+      "number": "100Jt+",
+      "caption": "Pelajar aktif"
+    },
+    {
+      "number": "40+",
+      "caption": "Bahasa"
+    },
+    {
+      "number": "100+",
+      "caption": "Pelajaran"
+    }
+  ]
+}

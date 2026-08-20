@@ -1,26 +1,30 @@
 {
   "project_name": "svralabs-unaltered-html",
-  "architecture_summary": "Modular React app. Static pages mirror Stitch screens. Shared components extracted from duolingo_card_components_showcase. Router use React Router. CSS use Tailwind. No state management (Redux/Yjs) yet. Data hardcoded. API stubs for later.",
+  "architecture_summary": "Modular React app. Each Stitch screen map to dedicated page component in src/pages/. Shared UI components extracted from repeated patterns in duolingo_card_components_showcase. React Router v6 for navigation. Tailwind CSS for styling. No state management library (use React context + useReducer for global state). Static data files for mock content until API ready.",
   "tickets": [
     {
       "id": "TASK-001",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Extract shared card components from duolingo_card_components_showcase",
+      "title": "Create shared UI component library from duolingo_card_components_showcase",
       "source_screen": "duolingo_card_components_showcase",
-      "description": "Identify reusable card components (achievement, course, leaderboard, etc). Create src/components/cards/. Each component accept props for dynamic content. Style match Stitch exactly. Use Tailwind classes. No logic. Pure presentational.",
+      "description": "Extract reusable components from duolingo_card_components_showcase. Components: Card, Button, ProgressBar, Avatar, Badge, Modal, Tooltip. Use Tailwind classes for styling. Export from src/components/index.js. Storybook stories optional but recommended for visual regression testing.",
       "target_files": [
-        "src/components/cards/AchievementCard.jsx",
-        "src/components/cards/CourseCard.jsx",
-        "src/components/cards/LeaderboardCard.jsx",
-        "src/components/cards/ProgressCard.jsx",
-        "src/components/cards/index.js"
+        "src/components/Card.jsx",
+        "src/components/Button.jsx",
+        "src/components/ProgressBar.jsx",
+        "src/components/Avatar.jsx",
+        "src/components/Badge.jsx",
+        "src/components/Modal.jsx",
+        "src/components/Tooltip.jsx",
+        "src/components/index.js"
       ],
       "acceptance_criteria": [
-        "Each card render correctly with sample data",
-        "Tailwind classes match Stitch pixel-perfect",
-        "Components stateless",
-        "index.js export all cards"
+        "Components match Stitch design pixel-perfect",
+        "Props documented with JSDoc",
+        "Tailwind classes used exclusively (no custom CSS files)",
+        "Components support dark mode via Tailwind dark: variant",
+        "All components exported from src/components/index.js"
       ],
       "status": "DONE"
     },
@@ -28,18 +32,19 @@
       "id": "TASK-002",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build landing page (duolingo_landing_page + variants)",
-      "source_screen": "duolingo_landing_page, duolingo_landing_focused_hero_social_proof_v1, duolingo_landing_feature_first_narrative_v2, duolingo_landing_community_social_learning_v3",
-      "description": "Combine all landing variants into single src/pages/Landing.jsx. Use conditional rendering for hero/social-proof/feature sections. Hardcode data. Reuse card components where applicable. Style match Stitch exactly. Mobile responsive via Tailwind.",
+      "title": "Implement duolingo_landing_page as LandingPage component",
+      "source_screen": "duolingo_landing_page",
+      "description": "Convert duolingo_landing_page HTML to React component. Use shared UI components from TASK-001. Static data for hero section, features, testimonials. Responsive layout with Tailwind. Mobile menu toggle use native details/summary elements if possible, else minimal JS.",
       "target_files": [
-        "src/pages/Landing.jsx",
-        "src/pages/Landing.module.css"
+        "src/pages/LandingPage.jsx",
+        "src/data/landingPageData.json"
       ],
       "acceptance_criteria": [
-        "All landing variants render correctly",
-        "Pixel-perfect match Stitch screens",
-        "Mobile responsive",
-        "No console errors"
+        "Pixel-perfect match to Stitch design",
+        "Responsive across mobile, tablet, desktop",
+        "Mobile menu functional (open/close)",
+        "All links point to # (placeholder)",
+        "Dark mode support via Tailwind"
       ],
       "status": "DONE"
     },
@@ -47,17 +52,19 @@
       "id": "TASK-003",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build learning dashboard (duolingo_learning_dashboard)",
+      "title": "Implement duolingo_learning_dashboard as LearningDashboard component",
       "source_screen": "duolingo_learning_dashboard",
-      "description": "Create src/pages/Dashboard.jsx. Layout match Stitch. Reuse card components. Hardcode user data (streak, XP, etc). Style match exactly. Mobile responsive.",
+      "description": "Convert duolingo_learning_dashboard HTML to React component. Use shared UI components. Static data for courses, progress, streaks. Progress bars use ProgressBar component. Course cards use Card component. Layout use CSS Grid for course grid, Flexbox for sidebar.",
       "target_files": [
-        "src/pages/Dashboard.jsx"
+        "src/pages/LearningDashboard.jsx",
+        "src/data/learningDashboardData.json"
       ],
       "acceptance_criteria": [
-        "Dashboard render correctly",
-        "Pixel-perfect match Stitch",
-        "Mobile responsive",
-        "Card components reused"
+        "Pixel-perfect match to Stitch design",
+        "Responsive layout (sidebar collapse on mobile)",
+        "Progress bars update dynamically (static data for now)",
+        "Course cards clickable (placeholder links)",
+        "Dark mode support"
       ],
       "status": "DONE"
     },
@@ -65,17 +72,19 @@
       "id": "TASK-004",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build learning table (duolingo_learning_table)",
-      "source_screen": "duolingo_learning_table",
-      "description": "Create src/pages/LearningTable.jsx. Table layout match Stitch. Hardcode lesson data. Style match exactly. Mobile responsive via Tailwind.",
+      "title": "Implement duolingo_profile_page as ProfilePage component",
+      "source_screen": "duolingo_profile_page",
+      "description": "Convert duolingo_profile_page HTML to React component. Use shared UI components. Static data for user stats, achievements, friends. Avatar component for user image. Badge component for achievements. Layout use Flexbox for stats, CSS Grid for achievements grid.",
       "target_files": [
-        "src/pages/LearningTable.jsx"
+        "src/pages/ProfilePage.jsx",
+        "src/data/profilePageData.json"
       ],
       "acceptance_criteria": [
-        "Table render correctly",
-        "Pixel-perfect match Stitch",
-        "Mobile responsive",
-        "No console errors"
+        "Pixel-perfect match to Stitch design",
+        "Responsive layout (achievements grid wrap on mobile)",
+        "Avatar editable (placeholder functionality)",
+        "Achievement badges clickable (placeholder links)",
+        "Dark mode support"
       ],
       "status": "DONE"
     },
@@ -83,17 +92,19 @@
       "id": "TASK-005",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build profile page (duolingo_profile_page)",
-      "source_screen": "duolingo_profile_page",
-      "description": "Create src/pages/Profile.jsx. Layout match Stitch. Hardcode user profile data. Reuse card components. Style match exactly. Mobile responsive.",
+      "title": "Implement duolingo_pricing_page as PricingPage component",
+      "source_screen": "duolingo_pricing_page",
+      "description": "Convert duolingo_pricing_page HTML to React component. Use shared UI components. Static data for pricing tiers. Card component for pricing cards. Button component for CTA. Layout use CSS Grid for pricing cards, Flexbox for features list.",
       "target_files": [
-        "src/pages/Profile.jsx"
+        "src/pages/PricingPage.jsx",
+        "src/data/pricingPageData.json"
       ],
       "acceptance_criteria": [
-        "Profile render correctly",
-        "Pixel-perfect match Stitch",
-        "Mobile responsive",
-        "Card components reused"
+        "Pixel-perfect match to Stitch design",
+        "Responsive layout (pricing cards stack on mobile)",
+        "Pricing toggle (monthly/yearly) functional (static data switch)",
+        "CTA buttons clickable (placeholder links)",
+        "Dark mode support"
       ],
       "status": "DONE"
     },
@@ -101,17 +112,19 @@
       "id": "TASK-006",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build pricing page (duolingo_pricing_page)",
-      "source_screen": "duolingo_pricing_page",
-      "description": "Create src/pages/Pricing.jsx. Layout match Stitch. Hardcode pricing tiers. Style match exactly. Mobile responsive.",
+      "title": "Implement duolingo_learning_table as LearningTable component",
+      "source_screen": "duolingo_learning_table",
+      "description": "Convert duolingo_learning_table HTML to React component. Use shared UI components. Static data for lessons, progress. Table layout use CSS Grid for rows/columns. ProgressBar component for lesson progress. Tooltip component for lesson details.",
       "target_files": [
-        "src/pages/Pricing.jsx"
+        "src/pages/LearningTable.jsx",
+        "src/data/learningTableData.json"
       ],
       "acceptance_criteria": [
-        "Pricing render correctly",
-        "Pixel-perfect match Stitch",
-        "Mobile responsive",
-        "No console errors"
+        "Pixel-perfect match to Stitch design",
+        "Responsive layout (table scroll horizontally on mobile)",
+        "Lesson rows clickable (placeholder links)",
+        "Progress bars update dynamically (static data)",
+        "Dark mode support"
       ],
       "status": "DONE"
     },
@@ -119,18 +132,18 @@
       "id": "TASK-007",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build style guide page (duolingo_style_guide_page)",
+      "title": "Implement duolingo_style_guide_page as StyleGuidePage component",
       "source_screen": "duolingo_style_guide_page",
-      "description": "Create src/pages/StyleGuide.jsx. Document all design tokens (colors, typography, spacing). Match Stitch exactly. Mobile responsive.",
+      "description": "Convert duolingo_style_guide_page HTML to React component. Document color palette, typography, spacing, components. Use shared UI components. Layout use CSS Grid for sections, Flexbox for component previews.",
       "target_files": [
-        "src/pages/StyleGuide.jsx",
-        "src/styles/tokens.css"
+        "src/pages/StyleGuidePage.jsx"
       ],
       "acceptance_criteria": [
-        "Style guide render correctly",
-        "All design tokens documented",
-        "Pixel-perfect match Stitch",
-        "Mobile responsive"
+        "Pixel-perfect match to Stitch design",
+        "All shared components documented with props and examples",
+        "Color palette documented with Tailwind class names",
+        "Typography documented with font sizes, weights, line heights",
+        "Dark mode support"
       ],
       "status": "DONE"
     },
@@ -140,23 +153,24 @@
       "model": "hermes-auto",
       "title": "App shell, navigation bar, and router wiring (src/App.jsx)",
       "source_screen": "",
-      "description": "Create src/App.jsx. Set up React Router with routes for all pages. Navigation bar match Stitch. Mobile responsive. Dark mode toggle (hardcoded state). Error boundary for 404.",
+      "description": "Create App shell with navigation bar. Use React Router v6 for routing. Navigation links point to implemented pages. Mobile-responsive navbar with toggle. Dark mode toggle in navbar. Layout use CSS Grid for main content, Flexbox for navbar. Error boundary for 404 page.",
       "target_files": [
         "src/App.jsx",
-        "src/components/NavBar.jsx",
-        "src/components/ErrorBoundary.jsx",
-        "src/index.js"
+        "src/components/Navbar.jsx",
+        "src/components/Footer.jsx",
+        "src/pages/NotFoundPage.jsx"
       ],
       "acceptance_criteria": [
-        "All routes work",
-        "Navigation bar render correctly",
-        "Mobile responsive",
-        "Dark mode toggle functional",
-        "404 page show on invalid route"
+        "All implemented pages accessible via navigation",
+        "Mobile navbar toggle functional",
+        "Dark mode toggle functional (persist to localStorage)",
+        "404 page for unknown routes",
+        "Responsive layout across all breakpoints",
+        "Navigation state active link highlighted"
       ],
       "status": "DONE"
     }
   ],
   "status": "IN_PROGRESS",
-  "updated_at": "2026-08-20 14:48:22"
+  "updated_at": "2026-08-20 16:46:14"
 }

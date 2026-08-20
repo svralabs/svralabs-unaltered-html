@@ -1,41 +1,16 @@
 import React from 'react';
+import learningTableData from '../data/learningTableData.json';
 
-const lessons = [
-  {
-    language: 'Spanish',
-    unit: 'Greetings',
-    progress: 75,
-    xp: 1200,
-    status: 'In Progress',
-    flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4'
-  },
-  {
-    language: 'French',
-    unit: 'Food',
-    progress: 50,
-    xp: 800,
-    status: 'In Progress',
-    flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4'
-  },
-  {
-    language: 'German',
-    unit: 'Travel',
-    progress: 90,
-    xp: 1500,
-    status: 'Completed',
-    flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4'
-  },
-  {
-    language: 'Italian',
-    unit: 'Culture',
-    progress: 30,
-    xp: 400,
-    status: 'In Progress',
-    flag: 'https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4'
-  }
-];
+const ProgressBar = ({ progress }) => (
+  <div className="w-full bg-surface-variant rounded-full h-2">
+    <div
+      className="bg-primary h-2 rounded-full"
+      style={{ width: `${progress}%` }}
+    ></div>
+  </div>
+);
 
-export default function LearningTable() {
+const LearningTable = () => {
   return (
     <div className="bg-surface-container-lowest rounded-xl border-2 border-border-color shadow-[0_4px_0_0_#E5E5E5] overflow-hidden">
       <div className="overflow-x-auto">
@@ -51,33 +26,39 @@ export default function LearningTable() {
             </tr>
           </thead>
           <tbody className="divide-y-2 divide-border-color">
-            {lessons.map((lesson, index) => (
+            {learningTableData.languages.map((language, index) => (
               <tr key={index} className="hover:bg-surface-container-low transition-colors group">
                 <td className="px-xl py-lg">
                   <div className="flex items-center gap-md">
                     <div className="w-10 h-8 rounded-lg overflow-hidden border-2 border-border-color">
-                      <img className="w-full h-full object-cover" alt={lesson.language} src={lesson.flag} />
+                      <img
+                        className="w-full h-full object-cover"
+                        src={language.flag}
+                        alt={`Flag of ${language.name}`}
+                      />
                     </div>
-                    <span className="font-body-lg text-on-surface">{lesson.language}</span>
+                    <span className="font-body-lg text-on-surface">{language.name}</span>
                   </div>
                 </td>
-                <td className="px-xl py-lg font-body-lg text-on-surface">{lesson.unit}</td>
+                <td className="px-xl py-lg font-body-lg text-on-surface">{language.unit}</td>
                 <td className="px-xl py-lg">
                   <div className="flex items-center gap-md">
-                    <div className="w-24 h-2 bg-surface-variant rounded-full">
-                      <div className="h-2 rounded-full bg-primary" style={{ width: `${lesson.progress}%` }}></div>
-                    </div>
-                    <span className="font-body-lg text-on-surface">{lesson.progress}%</span>
+                    <ProgressBar progress={language.progress} />
+                    <span className="font-body-lg text-on-surface">{language.progress}%</span>
                   </div>
                 </td>
-                <td className="px-xl py-lg font-body-lg text-on-surface">{lesson.xp}</td>
+                <td className="px-xl py-lg font-body-lg text-on-surface">{language.xp}</td>
                 <td className="px-xl py-lg">
-                  <span className={`px-md py-xs rounded-full font-label-caps text-[11px] ${lesson.status === 'Completed' ? 'bg-green-container text-on-green-container' : 'bg-orange-container text-on-orange-container'}`}>
-                    {lesson.status}
+                  <span className={`px-md py-xs rounded-full text-label-sm font-bold ${
+                    language.status === 'Completed'
+                      ? 'bg-green-container text-on-green-container'
+                      : 'bg-orange-container text-on-orange-container'
+                  }`}>
+                    {language.status}
                   </span>
                 </td>
                 <td className="px-xl py-lg text-center">
-                  <button className="px-md py-sm bg-secondary-container text-on-secondary-container rounded-xl font-label-caps text-[11px] hover:bg-secondary hover:text-on-secondary transition-colors active:scale-95">
+                  <button className="px-md py-sm bg-primary-container text-on-primary-container rounded-xl hover:bg-primary hover:text-on-primary transition-colors active:scale-95">
                     Lanjutkan
                   </button>
                 </td>
@@ -88,4 +69,6 @@ export default function LearningTable() {
       </div>
     </div>
   );
-}
+};
+
+export default LearningTable;

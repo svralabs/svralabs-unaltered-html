@@ -1,0 +1,36 @@
+{
+  "languages": [
+    {
+      "name": "Spanish",
+      "unit": "Introduction to Spanish",
+      "progress": 75,
+      "xp": 1200,
+      "status": "In Progress",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4"
+    },
+    {
+      "name": "French",
+      "unit": "Basic French",
+      "progress": 50,
+      "xp": 800,
+      "status": "In Progress",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4"
+    },
+    {
+      "name": "German",
+      "unit": "German Basics",
+      "progress": 90,
+      "xp": 1500,
+      "status": "Completed",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4"
+    },
+    {
+      "name": "Italian",
+      "unit": "Italian Fundamentals",
+      "progress": 30,
+      "xp": 400,
+      "status": "In Progress",
+      "flag": "https://lh3.googleusercontent.com/aida-public/AB6AXuD6QxgxyTkdYrrTPY8V9dzMtWHMp_yCzGy6CvosnvrFupWeQYAJ3zPBBExwae7WjNxEmEXDeeNS0RrYK97JvMSS3b1KlyGAGWK68Sm9ksmSaiSqgByKchlcrwFriZBJ31SlYhsqU1Ut2rsDp9vLk6O7wkPwRSfMSvt_dsDFOtj8Jik3Kbym1HRjLngKx-mVRIKHgZbq4PRM-tsj6Uf7ai7OxcGYKB7BafaCRUVCz_5CmHbrs1yZesZjkYvgkEECe_vs54RCh8Znrxx4"
+    }
+  ]
+}

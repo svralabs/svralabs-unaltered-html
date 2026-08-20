@@ -1,0 +1,120 @@
+{
+  "plans": [
+    {
+      "id": "free",
+      "name": "Gratis",
+      "price": {
+        "monthly": "Rp0",
+        "annual": "Rp0"
+      },
+      "billing": "/selamanya",
+      "description": "Semua yang kamu butuhkan untuk mulai belajar.",
+      "features": [
+        {
+          "text": "Semua pelajaran inti",
+          "included": true
+        },
+        {
+          "text": "Sistem streak & XP",
+          "included": true
+        },
+        {
+          "text": "Ikut liga mingguan",
+          "included": true
+        },
+        {
+          "text": "5 hati per hari",
+          "included": false
+        },
+        {
+          "text": "Ada iklan",
+          "included": false
+        }
+      ],
+      "cta": "Paket saat ini",
+      "isFeatured": false
+    },
+    {
+      "id": "super",
+      "name": "Super",
+      "price": {
+        "monthly": "Rp79rb",
+        "annual": "Rp47rb"
+      },
+      "billing": {
+        "monthly": "/bulan",
+        "annual": "/tahun"
+      },
+      "description": {
+        "monthly": "Ditagih bulanan, batal kapan saja.",
+        "annual": "Ditagih Rp569rb per tahun. Hemat 40%."
+      },
+      "features": [
+        {
+          "text": "Hati tak terbatas",
+          "included": true
+        },
+        {
+          "text": "Tanpa iklan sama sekali",
+          "included": true
+        },
+        {
+          "text": "Latihan kesalahan personal",
+          "included": true
+        },
+        {
+          "text": "Tantangan kuis penguasaan",
+          "included": true
+        },
+        {
+          "text": "Pelacak kemajuan terperinci",
+          "included": true
+        }
+      ],
+      "cta": "Coba 1 minggu gratis",
+      "isFeatured": true,
+      "popularBadge": "Paling populer"
+    },
+    {
+      "id": "super-family",
+      "name": "Super Family",
+      "price": {
+        "monthly": "Rp129rb",
+        "annual": "Rp77rb"
+      },
+      "billing": {
+        "monthly": "/bulan",
+        "annual": "/tahun"
+      },
+      "description": "Semua manfaat Super untuk hingga 6 anggota.",
+      "features": [
+        {
+          "text": "Hati tak terbatas",
+          "included": true
+        },
+        {
+          "text": "Tanpa iklan sama sekali",
+          "included": true
+        },
+        {
+          "text": "Latihan kesalahan personal",
+          "included": true
+        },
+        {
+          "text": "Tantangan kuis penguasaan",
+          "included": true
+        },
+        {
+          "text": "Pelacak kemajuan terperinci",
+          "included": true
+        },
+        {
+          "text": "Kelas bersama untuk keluarga",
+          "included": true
+        }
+      ],
+      "cta": "Coba 1 minggu gratis",
+      "isFeatured": false
+    }
+  ]
+}
