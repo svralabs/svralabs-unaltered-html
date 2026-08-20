@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.logoContainer {
+  width: 64px;
+  height: 64px;
+  background-color: #FFD700;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-3deg);
+}
+
+.titleContainer {
+  margin-top: 8px;
+}
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #1B1B1F;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #49454F;
+  margin-top: 4px;
+}
+
+.tabContainer {
+  display: flex;
+  padding: 4px;
+  background-color: #F5F5F5;
+  border: 1px solid #000000;
+  border-radius: 9999px;
+  width: 100%;
+}
+
+.tabButton {
+  flex: 1;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  border-radius: 9999px;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tabButton:hover {
+  background-color: #E7E0EC;
+}
+
+.activeTab {
+  background-color: #D0BCFF;
+  color: #381E72;
+  border-color: #000000;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.dividerLine {
+  flex: 1;
+  height: 1px;
+  background-color: #CAC4D0;
+}
+
+.dividerText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.33;
+  letter-spacing: 0.4px;
+  color: #CAC4D0;
+  text-transform: uppercase;
+}
+
+.googleButton {
+  width: 100%;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000;
+  border-radius: 12px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #49454F;
+  transition: colors 0.2s ease;
+}
+
+.googleButton:hover {
+  background-color: #E7E0EC;
+}
+
+.googleIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footerText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #49454F;
+}
+
+.link {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #6750A4;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}

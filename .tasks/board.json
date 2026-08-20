@@ -1,0 +1,178 @@
+{
+  "project_name": "svralabs-unaltered-html",
+  "architecture_summary": "Modular React app. Pages in src/pages/. Shared components in src/components/. CSS modules for styling. React Router for navigation. Vite build tool. No state management library (use React context for global state).",
+  "tickets": [
+    {
+      "id": "TASK-001",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create customer home page (src/pages/CustomerHome.jsx)",
+      "source_screen": "customer_home_jastiphub",
+      "description": "Convert Stitch HTML to React. Extract reusable components (ProductCard, Header, Footer). Preserve exact layout, colors, typography. Use CSS modules for styling.",
+      "target_files": [
+        "src/pages/CustomerHome.jsx",
+        "src/components/ProductCard.jsx",
+        "src/components/Header.jsx",
+        "src/components/Footer.jsx",
+        "src/pages/CustomerHome.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "Responsive across desktop/tablet/mobile",
+        "ProductCard component reusable for other pages",
+        "Header/Footer components shared across app"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-002",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create admin dashboard page (src/pages/AdminDashboard.jsx)",
+      "source_screen": "admin_dashboard_overview",
+      "description": "Convert admin dashboard HTML to React. Extract reusable components (StatsCard, Sidebar, DataTable). Preserve exact layout. Use CSS modules.",
+      "target_files": [
+        "src/pages/AdminDashboard.jsx",
+        "src/components/StatsCard.jsx",
+        "src/components/Sidebar.jsx",
+        "src/components/DataTable.jsx",
+        "src/pages/AdminDashboard.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "Responsive layout",
+        "StatsCard/DataTable components reusable",
+        "Sidebar collapsible (desktop only)"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-003",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create product detail page (src/pages/ProductDetail.jsx)",
+      "source_screen": "product_detail_order_form",
+      "description": "Convert product detail HTML to React. Extract OrderForm component. Preserve exact layout, form validation. Use CSS modules.",
+      "target_files": [
+        "src/pages/ProductDetail.jsx",
+        "src/components/OrderForm.jsx",
+        "src/pages/ProductDetail.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "Form validation for required fields",
+        "OrderForm component reusable for other products",
+        "Responsive image gallery"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-004",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create order history page (src/pages/OrderHistory.jsx)",
+      "source_screen": "order_history_tracking",
+      "description": "Convert order history HTML to React. Extract OrderCard component. Preserve exact layout, status indicators. Use CSS modules.",
+      "target_files": [
+        "src/pages/OrderHistory.jsx",
+        "src/components/OrderCard.jsx",
+        "src/pages/OrderHistory.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "OrderCard component reusable",
+        "Status filters functional",
+        "Responsive table layout"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-005",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create authentication pages (src/pages/Login.jsx, src/pages/Register.jsx)",
+      "source_screen": "authentication_screen",
+      "description": "Convert auth HTML to React. Extract AuthForm component. Preserve exact layout, form validation. Use CSS modules.",
+      "target_files": [
+        "src/pages/Login.jsx",
+        "src/pages/Register.jsx",
+        "src/components/AuthForm.jsx",
+        "src/pages/Login.module.css",
+        "src/pages/Register.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "Form validation for email/password",
+        "AuthForm component reusable for both pages",
+        "Password visibility toggle functional"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-006",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create admin event management page (src/pages/AdminEventManagement.jsx)",
+      "source_screen": "admin_event_management_screen",
+      "description": "Convert event management HTML to React. Extract EventForm, EventTable components. Preserve exact layout, CRUD functionality. Use CSS modules.",
+      "target_files": [
+        "src/pages/AdminEventManagement.jsx",
+        "src/components/EventForm.jsx",
+        "src/components/EventTable.jsx",
+        "src/pages/AdminEventManagement.module.css"
+      ],
+      "acceptance_criteria": [
+        "Pixel-perfect match to Stitch design",
+        "EventForm/EventTable components reusable",
+        "CRUD operations for events",
+        "Responsive table layout"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-007",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "Create design system components (src/components/DesignSystem/)",
+      "source_screen": "component_showcase_technical_tokens",
+      "description": "Extract reusable components from design system screens. Create Button, Card, Badge, Table, Input components. Use CSS modules for styling. Document props in JSDoc.",
+      "target_files": [
+        "src/components/DesignSystem/Button.jsx",
+        "src/components/DesignSystem/Card.jsx",
+        "src/components/DesignSystem/Badge.jsx",
+        "src/components/DesignSystem/Table.jsx",
+        "src/components/DesignSystem/Input.jsx",
+        "src/components/DesignSystem/index.js"
+      ],
+      "acceptance_criteria": [
+        "Components match Stitch design tokens exactly",
+        "All variants implemented (primary/secondary, sizes, etc.)",
+        "Props documented with JSDoc",
+        "Components reusable across app"
+      ],
+      "status": "DONE"
+    },
+    {
+      "id": "TASK-008",
+      "role": "frontend",
+      "model": "hermes-auto",
+      "title": "App shell, navigation bar, and router wiring (src/App.jsx)",
+      "source_screen": "",
+      "description": "Create app shell with navigation bar. Set up React Router with routes for all pages. Implement auth-protected routes. Use CSS modules for styling.",
+      "target_files": [
+        "src/App.jsx",
+        "src/App.module.css",
+        "src/routes.js"
+      ],
+      "acceptance_criteria": [
+        "Navigation bar matches Stitch design",
+        "All pages accessible via routes",
+        "Auth-protected routes redirect to login",
+        "Responsive navigation (mobile menu)"
+      ],
+      "status": "DONE"
+    }
+  ],
+  "status": "IN_PROGRESS",
+  "updated_at": "2026-08-20 11:06:58"
+}

@@ -1,0 +1,79 @@
+/* Order History Page Styles */
+.orderHistoryContainer {
+  padding-top: 6rem;
+  padding-bottom: 8rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  max-width: 48rem;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.headerSection {
+  margin-bottom: 3rem;
+}
+
+.pageTitle {
+  font-family: 'Sohne', sans-serif;
+  font-weight: 900;
+  font-size: 1.875rem;
+  margin-bottom: 2rem;
+}
+
+.filterContainer {
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.filterButton {
+  flex-shrink: 0;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 9999px;
+  border: 1px solid #000;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.filterButton:hover {
+  background-color: #e8e8e8;
+}
+
+.filterButton.active {
+  background-color: #e8e8e8;
+}
+
+.filterButton.all {
+  background-color: #fff;
+  color: #000;
+}
+
+.filterButton.processed {
+  background-color: #f3e8ff;
+  color: #6e00c9;
+}
+
+.filterButton.waiting {
+  background-color: #fff9c4;
+  color: #8d6e00;
+}
+
+.filterButton.completed {
+  background-color: #e8e8e8;
+  color: #000;
+}
+
+.noScrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.noScrollbar::-webkit-scrollbar {
+  display: none;
+}

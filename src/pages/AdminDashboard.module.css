@@ -1,0 +1,57 @@
+.sidebar {
+  height: 100vh;
+  width: 16rem;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-right: 1px solid var(--outline-variant);
+  background-color: var(--surface);
+  display: flex;
+  flex-direction: column;
+  padding: var(--p-md);
+  z-index: 50;
+}
+
+.mainContent {
+  margin-left: 16rem;
+  min-height: 100vh;
+}
+
+.topNav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 16rem);
+  height: 4rem;
+  border-bottom: 1px solid var(--outline-variant);
+  background-color: var(--surface);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--p-lg);
+  z-index: 40;
+}
+
+.pageContent {
+  margin-top: 4rem;
+  padding: var(--p-lg);
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: var(--gap-lg);
+  margin-bottom: var(--mb-lg);
+}
+
+@media (min-width: 768px) {
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .statsGrid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
