@@ -4,20 +4,22 @@ import { AuthProvider } from './context/AuthContext';
 import { CartProvider } from './context/CartContext';
 import { ThemeProvider } from './context/ThemeContext';
 import ErrorBoundary from './components/ErrorBoundary';
+import Pricing from './pages/Pricing';
+import Dashboard from './pages/Dashboard';
 import LearningTable from './pages/LearningTable';
-import LearningDashboard from './pages/LearningDashboard';
-import FeatureNarrativePage from './pages/FeatureNarrativePage';
-import ProfilePage from './pages/ProfilePage';
-import LandingPage from './pages/LandingPage';
+import Landing from './pages/Landing';
+import Profile from './pages/Profile';
+import StyleGuide from './pages/StyleGuide';
 
 function ScreenBar() {
   const loc = useLocation();
   const navs = [
-    { path: '/', label: 'LearningTable' },
-    { path: '/learningdashboard', label: 'LearningDashboard' },
-    { path: '/featurenarrativepage', label: 'FeatureNarrativePage' },
-    { path: '/profilepage', label: 'ProfilePage' },
-    { path: '/landingpage', label: 'LandingPage' }
+    { path: '/', label: 'Pricing' },
+    { path: '/dashboard', label: 'Dashboard' },
+    { path: '/learningtable', label: 'LearningTable' },
+    { path: '/landing', label: 'Landing' },
+    { path: '/profile', label: 'Profile' },
+    { path: '/styleguide', label: 'StyleGuide' }
   ];
 
   return (
@@ -53,12 +55,13 @@ export default function App() {
               <ScreenBar />
               <div className="pt-10 min-h-screen">
                 <Routes>
-                  <Route path='/' element={<LearningTable />} />
-        <Route path='/learningdashboard' element={<LearningDashboard />} />
-        <Route path='/featurenarrativepage' element={<FeatureNarrativePage />} />
-        <Route path='/profilepage' element={<ProfilePage />} />
-        <Route path='/landingpage' element={<LandingPage />} />
-                  <Route path="*" element={<LearningTable />} />
+                  <Route path='/' element={<Pricing />} />
+        <Route path='/dashboard' element={<Dashboard />} />
+        <Route path='/learningtable' element={<LearningTable />} />
+        <Route path='/landing' element={<Landing />} />
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/styleguide' element={<StyleGuide />} />
+                  <Route path="*" element={<Pricing />} />
                 </Routes>
               </div>
             </BrowserRouter>

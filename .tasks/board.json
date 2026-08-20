@@ -1,26 +1,26 @@
 {
   "project_name": "svralabs-unaltered-html",
-  "architecture_summary": "Modular React app. One page component per Stitch screen. Shared UI components extracted from card showcase. React Router v6 for navigation. Tailwind CSS for styling. No state management (local state only).",
+  "architecture_summary": "Modular React app. Static pages mirror Stitch screens. Shared components extracted from duolingo_card_components_showcase. Router use React Router. CSS use Tailwind. No state management (Redux/Yjs) yet. Data hardcoded. API stubs for later.",
   "tickets": [
     {
       "id": "TASK-001",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Create shared UI components from card showcase",
+      "title": "Extract shared card components from duolingo_card_components_showcase",
       "source_screen": "duolingo_card_components_showcase",
-      "description": "Extract reusable components (buttons, cards, progress bars, avatars) from card showcase. Style with Tailwind. Export from src/components/.",
+      "description": "Identify reusable card components (achievement, course, leaderboard, etc). Create src/components/cards/. Each component accept props for dynamic content. Style match Stitch exactly. Use Tailwind classes. No logic. Pure presentational.",
       "target_files": [
-        "src/components/Button.jsx",
-        "src/components/Card.jsx",
-        "src/components/ProgressBar.jsx",
-        "src/components/Avatar.jsx",
-        "src/components/index.js"
+        "src/components/cards/AchievementCard.jsx",
+        "src/components/cards/CourseCard.jsx",
+        "src/components/cards/LeaderboardCard.jsx",
+        "src/components/cards/ProgressCard.jsx",
+        "src/components/cards/index.js"
       ],
       "acceptance_criteria": [
-        "Components match Stitch design pixel-perfect",
-        "Tailwind classes only (no custom CSS)",
-        "Props for dynamic content (text, icons, colors, sizes)",
-        "Storybook stories optional (ponytail: add when >3 screens use component)"
+        "Each card render correctly with sample data",
+        "Tailwind classes match Stitch pixel-perfect",
+        "Components stateless",
+        "index.js export all cards"
       ],
       "status": "DONE"
     },
@@ -28,17 +28,18 @@
       "id": "TASK-002",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build landing page (hero + social proof)",
-      "source_screen": "duolingo_landing_focused_hero_social_proof_v1",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode content for now. Responsive layout.",
+      "title": "Build landing page (duolingo_landing_page + variants)",
+      "source_screen": "duolingo_landing_page, duolingo_landing_focused_hero_social_proof_v1, duolingo_landing_feature_first_narrative_v2, duolingo_landing_community_social_learning_v3",
+      "description": "Combine all landing variants into single src/pages/Landing.jsx. Use conditional rendering for hero/social-proof/feature sections. Hardcode data. Reuse card components where applicable. Style match Stitch exactly. Mobile responsive via Tailwind.",
       "target_files": [
-        "src/pages/LandingPage.jsx"
+        "src/pages/Landing.jsx",
+        "src/pages/Landing.module.css"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match to Stitch screen",
-        "Mobile/desktop responsive",
-        "No JS logic (static content only)",
-        "Tailwind classes only"
+        "All landing variants render correctly",
+        "Pixel-perfect match Stitch screens",
+        "Mobile responsive",
+        "No console errors"
       ],
       "status": "DONE"
     },
@@ -46,16 +47,17 @@
       "id": "TASK-003",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build landing page (feature narrative)",
-      "source_screen": "duolingo_landing_feature_first_narrative_v2",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode content.",
+      "title": "Build learning dashboard (duolingo_learning_dashboard)",
+      "source_screen": "duolingo_learning_dashboard",
+      "description": "Create src/pages/Dashboard.jsx. Layout match Stitch. Reuse card components. Hardcode user data (streak, XP, etc). Style match exactly. Mobile responsive.",
       "target_files": [
-        "src/pages/FeatureNarrativePage.jsx"
+        "src/pages/Dashboard.jsx"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match",
-        "Reuse components from TASK-001",
-        "Tailwind classes only"
+        "Dashboard render correctly",
+        "Pixel-perfect match Stitch",
+        "Mobile responsive",
+        "Card components reused"
       ],
       "status": "DONE"
     },
@@ -63,16 +65,17 @@
       "id": "TASK-004",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build landing page (community/social learning)",
-      "source_screen": "duolingo_landing_community_social_learning_v3",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode content.",
+      "title": "Build learning table (duolingo_learning_table)",
+      "source_screen": "duolingo_learning_table",
+      "description": "Create src/pages/LearningTable.jsx. Table layout match Stitch. Hardcode lesson data. Style match exactly. Mobile responsive via Tailwind.",
       "target_files": [
-        "src/pages/CommunityPage.jsx"
+        "src/pages/LearningTable.jsx"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match",
-        "Reuse components from TASK-001",
-        "Tailwind classes only"
+        "Table render correctly",
+        "Pixel-perfect match Stitch",
+        "Mobile responsive",
+        "No console errors"
       ],
       "status": "DONE"
     },
@@ -80,16 +83,17 @@
       "id": "TASK-005",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build learning dashboard",
-      "source_screen": "duolingo_learning_dashboard",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode user data. Add simple progress bar logic.",
+      "title": "Build profile page (duolingo_profile_page)",
+      "source_screen": "duolingo_profile_page",
+      "description": "Create src/pages/Profile.jsx. Layout match Stitch. Hardcode user profile data. Reuse card components. Style match exactly. Mobile responsive.",
       "target_files": [
-        "src/pages/LearningDashboard.jsx"
+        "src/pages/Profile.jsx"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match",
-        "Progress bars update on prop change",
-        "Tailwind classes only"
+        "Profile render correctly",
+        "Pixel-perfect match Stitch",
+        "Mobile responsive",
+        "Card components reused"
       ],
       "status": "DONE"
     },
@@ -97,16 +101,17 @@
       "id": "TASK-006",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build learning table",
-      "source_screen": "duolingo_learning_table",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode table data. Add hover/focus states.",
+      "title": "Build pricing page (duolingo_pricing_page)",
+      "source_screen": "duolingo_pricing_page",
+      "description": "Create src/pages/Pricing.jsx. Layout match Stitch. Hardcode pricing tiers. Style match exactly. Mobile responsive.",
       "target_files": [
-        "src/pages/LearningTable.jsx"
+        "src/pages/Pricing.jsx"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match",
-        "Table rows interactive (hover/focus)",
-        "Tailwind classes only"
+        "Pricing render correctly",
+        "Pixel-perfect match Stitch",
+        "Mobile responsive",
+        "No console errors"
       ],
       "status": "DONE"
     },
@@ -114,16 +119,18 @@
       "id": "TASK-007",
       "role": "frontend",
       "model": "hermes-auto",
-      "title": "Build profile page",
-      "source_screen": "duolingo_profile_page",
-      "description": "Convert Stitch HTML to React. Use shared components. Hardcode user profile data.",
+      "title": "Build style guide page (duolingo_style_guide_page)",
+      "source_screen": "duolingo_style_guide_page",
+      "description": "Create src/pages/StyleGuide.jsx. Document all design tokens (colors, typography, spacing). Match Stitch exactly. Mobile responsive.",
       "target_files": [
-        "src/pages/ProfilePage.jsx"
+        "src/pages/StyleGuide.jsx",
+        "src/styles/tokens.css"
       ],
       "acceptance_criteria": [
-        "Pixel-perfect match",
-        "Avatar component reusable",
-        "Tailwind classes only"
+        "Style guide render correctly",
+        "All design tokens documented",
+        "Pixel-perfect match Stitch",
+        "Mobile responsive"
       ],
       "status": "DONE"
     },
@@ -133,22 +140,23 @@
       "model": "hermes-auto",
       "title": "App shell, navigation bar, and router wiring (src/App.jsx)",
       "source_screen": "",
-      "description": "Create app shell. Add navigation bar. Set up React Router v6. Route all pages. Add 404 page. Style nav with Tailwind.",
+      "description": "Create src/App.jsx. Set up React Router with routes for all pages. Navigation bar match Stitch. Mobile responsive. Dark mode toggle (hardcoded state). Error boundary for 404.",
       "target_files": [
         "src/App.jsx",
         "src/components/NavBar.jsx",
-        "src/pages/NotFound.jsx"
+        "src/components/ErrorBoundary.jsx",
+        "src/index.js"
       ],
       "acceptance_criteria": [
-        "All pages route correctly",
-        "Nav bar matches Stitch style guide",
-        "404 page styled",
-        "Tailwind classes only",
-        "Router lazy loading optional (ponytail: add when bundle >500KB)"
+        "All routes work",
+        "Navigation bar render correctly",
+        "Mobile responsive",
+        "Dark mode toggle functional",
+        "404 page show on invalid route"
       ],
       "status": "DONE"
     }
   ],
   "status": "IN_PROGRESS",
-  "updated_at": "2026-08-20 13:04:33"
+  "updated_at": "2026-08-20 14:48:22"
 }
